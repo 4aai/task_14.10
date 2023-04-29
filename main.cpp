@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-void PrintAutocompleteAll(trie* root, const std::string& start_prefix )
+void PrintSuggestionAll(trie* root, const std::string& start_prefix )
 {
     if (root->prefCount > 1)
     {
@@ -54,7 +54,7 @@ int main()
 
             if (root->Search(root, inputWord) && inputWord != "") {
                 root->FindAllPrefixes(root, buf, 0, inputWord);
-                PrintAutocompleteAll(root, inputWord);
+                PrintSuggestionAll(root, inputWord);
             }
             root->Insert(root, inputWord);
             inputWord.clear();
