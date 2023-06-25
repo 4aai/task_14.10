@@ -9,10 +9,7 @@ void PrintSuggestionAll(trie* root, const std::string& start_prefix )
     {
         for (size_t i = 0; i < root->prefCount; i++)
         {
-            printf_s("\033[44m");
-            std::cout << start_prefix << root->prefixes_[i] ;
-            printf_s("\033[0m");
-            std::cout << "\n";
+            std::cout << "\033[101m" << start_prefix << "\033[44m" << root->prefixes_[i] << "\033[0m\n";
         }
          
     }
