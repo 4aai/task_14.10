@@ -5,7 +5,7 @@
 
 void PrintSuggestionAll(trie* root, const std::string& start_prefix )
 {
-    if (root->prefCount > 1)
+    if (root->prefCount >= 1)
     {
         for (size_t i = 0; i < root->prefCount; i++)
         {
